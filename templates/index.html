@@ -31,12 +31,6 @@
                       GCcollab
                     </h4>
                     <div class="row" class="datacard-group" style="margin-bottom: 25px;">
-                      <div class="col-md-3 active-gccollab-card" id="gccollabActiveUsersCard">
-                        <div class="text-center">
-                          <div class="card-field-name">USERS ONLINE</div>
-                          <div class="card-value" id="gccollabActiveUsers">0</div>
-                        </div>
-                      </div>
                       <div class="col-md-3 gccollab-card" id="gccollabTopOrgsCard">
                         <div class="text-center">
                           <div class="card-field-name">TOTAL ORGANIZATIONS</div>
@@ -55,58 +49,146 @@
                           <div class="card-value" id="gccollabTotalUsers">52,282</div>
                         </div>
                       </div>
+                      <div class="col-md-3 active-gccollab-card" id="gccollabActiveUsersCard">
+                        <div class="text-center">
+                          <div class="card-field-name">USERS ONLINE</div>
+                          <div class="card-value" id="gccollabActiveUsers">0</div>
+                        </div>
+                      </div>
                     </div>
                     
-                    <canvas id="gccollabActiveUsersChart" style="max-height: 335px; display: block;"></canvas>
                     <canvas id="gccollabTopOrgsChart" style="max-height: 335px; display: none;"></canvas>
                     <canvas id="gccollabTopGroupsChart" style="max-height: 335px; display: none;"></canvas>
                     <canvas id="gccollabUsersChart" style="max-height: 335px; display: none;"></canvas>
+                    <canvas id="gccollabActiveUsersChart" style="max-height: 335px; display: block;"></canvas>
+                  </div>
+              </div>
+          </div>
+            <div class="col-md-6">
+              <div class="shadow-sm card mb-2 d-inline-block" style="width: 100%; max-height: 500px;">
+                  <div class="card-body datacard">
+                    <h4 class="platform-title">
+                      <img src="images/GCconnex.png" style="float:left; width: 30px; height: 30px;">
+                      GCconnex
+                    </h4>
+                    <div class="row" class="datacard-group" style="margin-bottom: 25px;">
+                      <div class="col-md-3 active-connex-card" id="connexUsersCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL USERS</div>
+                          <div class="card-value">176,180</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 connex-card" id="connexPageviewsCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL PAGEVIEWS</div>
+                          <div class="card-value">96,240,633</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 connex-card" id="connexContentCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL POSTS</div>
+                          <div class="card-value">286,870</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 connex-card" id="connexActiveUsersCard">
+                        <div class="text-center">
+                          <div class="card-field-name">USERS ONLINE</div>
+                          <div class="card-value" id="connexActiveUsers">0</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <canvas id="connexUsersCard" style="max-height: 335px; display: block;"></canvas>
+                    <canvas id="connexPageviewsCard" style="max-height: 335px; display: none;"></canvas>
+                    <canvas id="connexContentCard" style="max-height: 335px; display: none;"></canvas>
+                    <canvas id="connexActiveUsersCard" style="max-height: 335px; display: none;"></canvas>
                   </div>
               </div>
           </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                <div class="shadow-sm card mb-2 d-inline-block" style="width: 100%; max-height: 500px;">
-                    <div class="card-body datacard">
-                      <h4 class="platform-title">
-                        <img src="images/oadw.png" style="float:left; width: 30px; height: 30px;">
-                        GCmessage
-                      </h4>
-                      <div class="row" class="datacard-group" style="margin-bottom: 25px;">
-                        <div class="col-md-3 active-rocket-card" id="rocketMessagesCard">
-                          <div class="text-center">
-                            <div class="card-field-name">TOTAL MESSAGES SENT</div>
-                            <div class="card-value">2,098,818</div>
-                          </div>
-                        </div>
-                        <div class="col-md-3 rocket-card" id="rocketRoomsCard">
-                          <div class="text-center">
-                            <div class="card-field-name">TOTAL CHAT ROOMS</div>
-                            <div class="card-value">14,939</div>
-                          </div>
-                        </div>
-                        <div class="col-md-3 rocket-card" id="rocketUsersCard">
-                          <div class="text-center">
-                            <div class="card-field-name">TOTAL USERS</div>
-                            <div class="card-value">8,600</div>
-                          </div>
-                        </div>
-                        <div class="col-md-3 rocket-card" id="rocketFilesCard">
-                          <div class="text-center">
-                            <div class="card-field-name">TOTAL FILES UPLOADED</div>
-                            <div class="card-value">17075</div>
-                          </div>
+          <div class="col-md-6">
+              <div class="shadow-sm card mb-2 d-inline-block" style="width: 100%; max-height: 500px;">
+                  <div class="card-body datacard">
+                    <h4 class="platform-title">
+                      <img src="images/oadw.png" style="float:left; width: 30px; height: 30px;">
+                      GCmessage
+                    </h4>
+                    <div class="row" class="datacard-group" style="margin-bottom: 25px;">
+                      <div class="col-md-3 active-rocket-card" id="rocketMessagesCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL MESSAGES SENT</div>
+                          <div class="card-value">2,098,818</div>
                         </div>
                       </div>
-                      
-                      <canvas id="rocketMessagesChart" style="max-height: 335px; display: block;"></canvas>
-                      <canvas id="rocketRoomsChart" style="max-height: 335px; display: none;"></canvas>
-                      <canvas id="rocketUsersChart" style="max-height: 335px; display: none;"></canvas>
-                      <canvas id="rocketFilesChart" style="max-height: 335px; display: none;"></canvas>
+                      <div class="col-md-3 rocket-card" id="rocketRoomsCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL CHAT ROOMS</div>
+                          <div class="card-value">14,939</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 rocket-card" id="rocketUsersCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL USERS</div>
+                          <div class="card-value">8,600</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 rocket-card" id="rocketFilesCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL FILES UPLOADED</div>
+                          <div class="card-value">17075</div>
+                        </div>
+                      </div>
                     </div>
-                </div>
-            </div>
+                    
+                    <canvas id="rocketMessagesChart" style="max-height: 335px; display: block;"></canvas>
+                    <canvas id="rocketRoomsChart" style="max-height: 335px; display: none;"></canvas>
+                    <canvas id="rocketUsersChart" style="max-height: 335px; display: none;"></canvas>
+                    <canvas id="rocketFilesChart" style="max-height: 335px; display: none;"></canvas>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="shadow-sm card mb-2 d-inline-block" style="width: 100%; max-height: 500px;">
+                  <div class="card-body datacard">
+                    <h4 class="platform-title">
+                      <img src="images/GCpedia.png" style="float:left; width: 30px; height: 30px;">
+                      GCpedia
+                    </h4>
+                    <div class="row" class="datacard-group" style="margin-bottom: 25px;">
+                      <div class="col-md-3 active-pedia-card" id="pediaPageviewsCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL PAGEVIEWS</div>
+                          <div class="card-value">13,620,471</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 pedia-card" id="pediaPageviewsCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL ARTICLES</div>
+                          <div class="card-value">397,257</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 pedia-card" id="pediaEditsCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL EDITS</div>
+                          <div class="card-value">2,121,128</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 pedia-card" id="pediaActiveUsersCard">
+                        <div class="text-center">
+                          <div class="card-field-name">USERS ONLINE</div>
+                          <div class="card-value" id="pediaActiveUsers">0</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <canvas id="connexUsersCard" style="max-height: 335px; display: block;"></canvas>
+                    <canvas id="connexPageviewsCard" style="max-height: 335px; display: none;"></canvas>
+                    <canvas id="connexContentCard" style="max-height: 335px; display: none;"></canvas>
+                    <canvas id="connexActiveUsersCard" style="max-height: 335px; display: none;"></canvas>
+                  </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>

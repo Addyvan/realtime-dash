@@ -19,16 +19,16 @@ class DashboardState {
 
   init() {
     this.gccollab["charts"] = [
-      gccollabActiveUsersChart,
       gccollabTopOrgsChart,
       gccollabTopGroupsChart,
-      gccollabUsersChart
+      gccollabUsersChart,
+      gccollabActiveUsersChart
     ]
     this.gccollab["cards"] = [
-      document.getElementById("gccollabActiveUsersCard"),
       document.getElementById("gccollabTopOrgsCard"),
       document.getElementById("gccollabTopGroupsCard"),
-      document.getElementById("gccollabUsersCard")
+      document.getElementById("gccollabUsersCard"),
+      document.getElementById("gccollabActiveUsersCard")
     ]
     this.rocketchat["charts"] = [
       rocketMessagesChart,

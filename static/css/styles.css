@@ -37,6 +37,26 @@ h1,h2,h3,h4,h5,h6 {
   background-color: #f7f7f7;
 }
 
+.active-connex-card {
+  background-color: #FFFFFF;
+  border-top: 4px solid #056315;
+}
+
+.connex-card {
+  border-top: 1px solid #a3a3a3;
+  background-color: #f7f7f7;
+}
+
+.active-pedia-card {
+  background-color: #FFFFFF;
+  border-top: 4px solid #180bd8;
+}
+
+.pedia-card {
+  border-top: 1px solid #a3a3a3;
+  background-color: #f7f7f7;
+}
+
 .datacard-group {
   border-top: 1px solid #202020;
 }
