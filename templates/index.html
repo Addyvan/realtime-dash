@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans|Rubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href='css/bootstrap.min.css'>
+    <link rel="stylesheet" href='css/styles.css'>
+    <title>GCtools Realtime Dash</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" style="height: 100%; overflow: hidden;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12" style="margin-top: 20px;">
+            <h2 style="color: #8b8b8b">DASHBOARD</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+              <div class="shadow-sm card mb-2 d-inline-block" style="width: 100%; max-height: 500px;">
+                  <div class="card-body datacard">
+                    <h4 class="platform-title">
+                      <img src="images/GCcollab.png" style="float:left; width: 30px; height: 30px;">
+                      GCcollab
+                    </h4>
+                    <div class="row" class="datacard-group" style="margin-bottom: 25px;">
+                      <div class="col-md-3 active-gccollab-card" id="gccollabActiveUsersCard">
+                        <div class="text-center">
+                          <div class="card-field-name">USERS ONLINE</div>
+                          <div class="card-value" id="gccollabActiveUsers">0</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 gccollab-card" id="gccollabTopOrgsCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL ORGANIZATIONS</div>
+                          <div class="card-value">668</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 gccollab-card" id="gccollabTopGroupsCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL GROUPS</div>
+                          <div class="card-value">2,627</div>
+                        </div>
+                      </div>
+                      <div class="col-md-3 gccollab-card" id="gccollabUsersCard">
+                        <div class="text-center">
+                          <div class="card-field-name">TOTAL USERS</div>
+                          <div class="card-value" id="gccollabTotalUsers">52,282</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <canvas id="gccollabActiveUsersChart" style="max-height: 335px; display: block;"></canvas>
+                    <canvas id="gccollabTopOrgsChart" style="max-height: 335px; display: none;"></canvas>
+                    <canvas id="gccollabTopGroupsChart" style="max-height: 335px; display: none;"></canvas>
+                    <canvas id="gccollabUsersChart" style="max-height: 335px; display: none;"></canvas>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="shadow-sm card mb-2 d-inline-block" style="width: 100%; max-height: 500px;">
+                    <div class="card-body datacard">
+                      <h4 class="platform-title">
+                        <img src="images/oadw.png" style="float:left; width: 30px; height: 30px;">
+                        GCmessage
+                      </h4>
+                      <div class="row" class="datacard-group" style="margin-bottom: 25px;">
+                        <div class="col-md-3 active-rocket-card" id="rocketMessagesCard">
+                          <div class="text-center">
+                            <div class="card-field-name">TOTAL MESSAGES SENT</div>
+                            <div class="card-value">2,098,818</div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 rocket-card" id="rocketRoomsCard">
+                          <div class="text-center">
+                            <div class="card-field-name">TOTAL CHAT ROOMS</div>
+                            <div class="card-value">14,939</div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 rocket-card" id="rocketUsersCard">
+                          <div class="text-center">
+                            <div class="card-field-name">TOTAL USERS</div>
+                            <div class="card-value">8,600</div>
+                          </div>
+                        </div>
+                        <div class="col-md-3 rocket-card" id="rocketFilesCard">
+                          <div class="text-center">
+                            <div class="card-field-name">TOTAL FILES UPLOADED</div>
+                            <div class="card-value">17075</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <canvas id="rocketMessagesChart" style="max-height: 335px; display: block;"></canvas>
+                      <canvas id="rocketRoomsChart" style="max-height: 335px; display: none;"></canvas>
+                      <canvas id="rocketUsersChart" style="max-height: 335px; display: none;"></canvas>
+                      <canvas id="rocketFilesChart" style="max-height: 335px; display: none;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/lib/Chart.min.js"></script>
+  <script src='js/datastore.js'></script>
+  <script src='js/chart.js'></script>
+  <script src='js/collabData.js'></script>
+  <script src='js/rocketData.js'></script>
+  <script src='js/gccollab.js'></script>
+  <script src='js/gcconnex.js'></script>
+  <script src='js/gcpedia.js'></script>
+  <script src='js/rocketchat.js'></script>
+  <script src='js/statehandler.js'></script>
+  <script src='js/websocket.js'></script>
+</html>

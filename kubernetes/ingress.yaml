@@ -1,0 +1,40 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: realtimedash-ingress
+  namespace: analytics
+  annotations:
+    kubernetes.io/tls-acme:  "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/affinity: "cookie"
+    nginx.ingress.kubernetes.io/session-cookie-name: "route"
+    nginx.ingress.kubernetes.io/session-cookie-hash: "sha1"
+spec:
+  tls:
+  - hosts:
+    - analytics.gccollab.ca
+    secretName: realtimedash-secret
+  rules:
+  - host: analytics.gccollab.ca
+    http:
+      paths:
+      - path: /dash
+        backend:
+          serviceName: realtimedash
+          servicePort: 8888
+      - path: /css
+        backend:
+          serviceName: realtimedash
+          servicePort: 8888   
+      - path: /js
+        backend:
+          serviceName: realtimedash
+          servicePort: 8888
+      - path: /images
+        backend:
+          serviceName: realtimedash
+          servicePort: 8888
+      - path: /web
+        backend:
+          serviceName: realtimedash
+          servicePort: 8888

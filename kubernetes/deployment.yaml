@@ -1,0 +1,32 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: realtimedash
+  name: realtimedash
+  namespace: analytics
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: realtimedash
+  template:
+    metadata:
+      labels:
+        app: realtimedash
+    spec:
+      containers:
+      - image: index.docker.io/addyvan/realtimedash:latest
+        name: realtimedash
+        ports:
+          - containerPort: 8888
+        env:
+        - name: GA-CLIENT-SECRETS
+          valueFrom:
+            secretKeyRef:
+              name: gcga
+              key: client_secrets.json
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "0.15"
